@@ -1,0 +1,27 @@
+# Visual Odometry Configuration
+
+# Feature detection parameters
+feature_detector: "ORB"  # ORB, SIFT, SURF
+max_features: 1000
+match_ratio: 0.7
+ransac_threshold: 1.0
+ransac_prob: 0.999
+min_matches: 50
+
+# Camera calibration (default values - should be replaced with real calibration)
+camera_matrix:
+  - [525.0, 0.0, 320.0]
+  - [0.0, 525.0, 240.0]
+  - [0.0, 0.0, 1.0]
+
+dist_coeffs: [0.0, 0.0, 0.0, 0.0, 0.0]
+
+# Evaluation parameters
+ate_alignment: true
+rpe_delta: 1.0
+
+# Visualization parameters
+trajectory_plot_size: [12, 8]
+feature_match_max: 50
+save_plots: true
+plot_dpi: 300
